@@ -2,6 +2,7 @@
 import board
 from analogio import AnalogOut
 
+# set output to pin A0, only pin without true analog output
 analog_out = AnalogOut(board.A0)
 
 while True:
