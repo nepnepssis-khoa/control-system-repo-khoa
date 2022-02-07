@@ -8,8 +8,10 @@ analog_in = AnalogIn(board.A1)
 
 # This function turns the analog reading of the sensor (a number from 0 - 65536) to a voltage.
 def get_voltage(pin):
+    # Read pin.value, map from 0-65536 to 0-3.3
     return (pin.value * 3.3) / 65536
 
+# input loop
 while True:
     print((get_voltage(analog_in),))
     time.sleep(0.1)
