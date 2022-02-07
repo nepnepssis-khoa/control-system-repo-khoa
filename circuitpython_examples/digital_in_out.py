@@ -5,12 +5,14 @@ from digitalio import DigitalInOut, Direction, Pull
 
 # LED setup.
 led = DigitalInOut(board.LED)
-
+# Set led pin direction
 led.direction = Direction.OUTPUT
 
 # Switch setup
 switch = DigitalInOut(board.D2)
+# Set direction
 switch.direction = Direction.INPUT
+# Set pin pull direction (for direction = input only)
 switch.pull = Pull.UP
 
 while True:
