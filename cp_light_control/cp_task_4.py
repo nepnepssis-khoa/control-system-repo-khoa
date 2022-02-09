@@ -9,5 +9,5 @@ light = 0
 
 while True:
   light = analog_in.value
-  analog_out.value = 65536 - light
+  analog_out.value = light
   time.sleep(0.1)
